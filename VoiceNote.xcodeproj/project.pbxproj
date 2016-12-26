@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7267A0AFCA9973B28485D102 /* libPods-VoiceNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8873DBE622F0921B0AE61A1D /* libPods-VoiceNote.a */; };
+		7D3935721E10F3E2007B4883 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D39356D1E10F3E2007B4883 /* BaseViewController.m */; };
+		7D3935731E10F3E2007B4883 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D39356F1E10F3E2007B4883 /* ListViewController.m */; };
+		7D3935741E10F3E2007B4883 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3935711E10F3E2007B4883 /* RecordViewController.m */; };
+		7D3935781E10F436007B4883 /* AudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3935771E10F436007B4883 /* AudioManager.m */; };
+		7D39357A1E10F450007B4883 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3935791E10F450007B4883 /* AVFoundation.framework */; };
+		7D39357F1E110039007B4883 /* NoteListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D39357E1E110039007B4883 /* NoteListTableViewCell.m */; };
+		7D3935831E1100E3007B4883 /* NoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3935821E1100E3007B4883 /* NoteModel.m */; };
+		7D3935851E11015A007B4883 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3935841E11015A007B4883 /* CoreGraphics.framework */; };
+		7D3935961E111506007B4883 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3935931E111506007B4883 /* NSString+Extension.m */; };
+		7D3935971E111506007B4883 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3935951E111506007B4883 /* UIView+Extension.m */; };
+		7D3935A11E1129F9007B4883 /* NSObject+SXJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D39359C1E1129F9007B4883 /* NSObject+SXJ.m */; };
+		7D3935A31E1129F9007B4883 /* SXJDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D39359F1E1129F9007B4883 /* SXJDatabaseManager.m */; };
+		7D3935A41E1129F9007B4883 /* typeEncoding.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D3935A01E1129F9007B4883 /* typeEncoding.plist */; };
+		7D3935A71E112AF2007B4883 /* NoteDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3935A61E112AF2007B4883 /* NoteDBManager.m */; };
+		7D3935AA1E112E43007B4883 /* MD5Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3935A91E112E43007B4883 /* MD5Tool.m */; };
+		7D3935AD1E112FA2007B4883 /* EBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3935AC1E112FA2007B4883 /* EBCommon.m */; };
+		7D3935B01E116BEE007B4883 /* EBAppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3935AF1E116BEE007B4883 /* EBAppConfig.m */; };
+		7DBCE3B41E10EA82004A203C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBCE3B31E10EA82004A203C /* main.m */; };
+		7DBCE3B71E10EA82004A203C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBCE3B61E10EA82004A203C /* AppDelegate.m */; };
+		7DBCE3BF1E10EA82004A203C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DBCE3BE1E10EA82004A203C /* Assets.xcassets */; };
+		7DBCE3C21E10EA82004A203C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DBCE3C01E10EA82004A203C /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0BF516DC1B78CABFC19BC18D /* Pods-VoiceNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoiceNote/Pods-VoiceNote.debug.xcconfig"; sourceTree = "<group>"; };
+		178D9EA9303336DC99D98D1B /* Pods-VoiceNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoiceNote/Pods-VoiceNote.release.xcconfig"; sourceTree = "<group>"; };
+		7D39356C1E10F3E2007B4883 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		7D39356D1E10F3E2007B4883 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		7D39356E1E10F3E2007B4883 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		7D39356F1E10F3E2007B4883 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		7D3935701E10F3E2007B4883 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		7D3935711E10F3E2007B4883 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		7D3935761E10F436007B4883 /* AudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManager.h; sourceTree = "<group>"; };
+		7D3935771E10F436007B4883 /* AudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioManager.m; sourceTree = "<group>"; };
+		7D3935791E10F450007B4883 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7D39357D1E110039007B4883 /* NoteListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteListTableViewCell.h; sourceTree = "<group>"; };
+		7D39357E1E110039007B4883 /* NoteListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteListTableViewCell.m; sourceTree = "<group>"; };
+		7D3935811E1100E3007B4883 /* NoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteModel.h; sourceTree = "<group>"; };
+		7D3935821E1100E3007B4883 /* NoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteModel.m; sourceTree = "<group>"; };
+		7D3935841E11015A007B4883 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7D39358F1E111275007B4883 /* ACMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACMacro.h; sourceTree = "<group>"; };
+		7D3935901E1113C7007B4883 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7D3935921E111506007B4883 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		7D3935931E111506007B4883 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		7D3935941E111506007B4883 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		7D3935951E111506007B4883 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		7D39359B1E1129F9007B4883 /* NSObject+SXJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SXJ.h"; sourceTree = "<group>"; };
+		7D39359C1E1129F9007B4883 /* NSObject+SXJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SXJ.m"; sourceTree = "<group>"; };
+		7D39359E1E1129F9007B4883 /* SXJDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXJDatabaseManager.h; sourceTree = "<group>"; };
+		7D39359F1E1129F9007B4883 /* SXJDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXJDatabaseManager.m; sourceTree = "<group>"; };
+		7D3935A01E1129F9007B4883 /* typeEncoding.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = typeEncoding.plist; sourceTree = "<group>"; };
+		7D3935A51E112AF2007B4883 /* NoteDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteDBManager.h; sourceTree = "<group>"; };
+		7D3935A61E112AF2007B4883 /* NoteDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteDBManager.m; sourceTree = "<group>"; };
+		7D3935A81E112E43007B4883 /* MD5Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Tool.h; sourceTree = "<group>"; };
+		7D3935A91E112E43007B4883 /* MD5Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5Tool.m; sourceTree = "<group>"; };
+		7D3935AB1E112FA2007B4883 /* EBCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBCommon.h; sourceTree = "<group>"; };
+		7D3935AC1E112FA2007B4883 /* EBCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBCommon.m; sourceTree = "<group>"; };
+		7D3935AE1E116BEE007B4883 /* EBAppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBAppConfig.h; sourceTree = "<group>"; };
+		7D3935AF1E116BEE007B4883 /* EBAppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBAppConfig.m; sourceTree = "<group>"; };
+		7DBCE3AF1E10EA82004A203C /* VoiceNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DBCE3B31E10EA82004A203C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7DBCE3B51E10EA82004A203C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7DBCE3B61E10EA82004A203C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7DBCE3BE1E10EA82004A203C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7DBCE3C11E10EA82004A203C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7DBCE3C31E10EA82004A203C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8873DBE622F0921B0AE61A1D /* libPods-VoiceNote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoiceNote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DBCE3AC1E10EA82004A203C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D3935851E11015A007B4883 /* CoreGraphics.framework in Frameworks */,
+				7D39357A1E10F450007B4883 /* AVFoundation.framework in Frameworks */,
+				7267A0AFCA9973B28485D102 /* libPods-VoiceNote.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19352DB3F797070748B7D106 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D3935841E11015A007B4883 /* CoreGraphics.framework */,
+				7D3935791E10F450007B4883 /* AVFoundation.framework */,
+				8873DBE622F0921B0AE61A1D /* libPods-VoiceNote.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5846F00132C478F3F4CF0630 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BF516DC1B78CABFC19BC18D /* Pods-VoiceNote.debug.xcconfig */,
+				178D9EA9303336DC99D98D1B /* Pods-VoiceNote.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7D39356B1E10F3E2007B4883 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7D39356C1E10F3E2007B4883 /* BaseViewController.h */,
+				7D39356D1E10F3E2007B4883 /* BaseViewController.m */,
+				7D39356E1E10F3E2007B4883 /* ListViewController.h */,
+				7D39356F1E10F3E2007B4883 /* ListViewController.m */,
+				7D3935701E10F3E2007B4883 /* RecordViewController.h */,
+				7D3935711E10F3E2007B4883 /* RecordViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7D3935751E10F436007B4883 /* AudioManager */ = {
+			isa = PBXGroup;
+			children = (
+				7D3935761E10F436007B4883 /* AudioManager.h */,
+				7D3935771E10F436007B4883 /* AudioManager.m */,
+			);
+			path = AudioManager;
+			sourceTree = "<group>";
+		};
+		7D39357C1E110010007B4883 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D39357D1E110039007B4883 /* NoteListTableViewCell.h */,
+				7D39357E1E110039007B4883 /* NoteListTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D3935801E1100B1007B4883 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D3935811E1100E3007B4883 /* NoteModel.h */,
+				7D3935821E1100E3007B4883 /* NoteModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7D3935881E110F2B007B4883 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				7D3935A81E112E43007B4883 /* MD5Tool.h */,
+				7D3935A91E112E43007B4883 /* MD5Tool.m */,
+				7D39359A1E1129F9007B4883 /* DB */,
+				7D3935911E111506007B4883 /* Category */,
+				7D39358F1E111275007B4883 /* ACMacro.h */,
+				7D3935AB1E112FA2007B4883 /* EBCommon.h */,
+				7D3935AC1E112FA2007B4883 /* EBCommon.m */,
+				7D3935AE1E116BEE007B4883 /* EBAppConfig.h */,
+				7D3935AF1E116BEE007B4883 /* EBAppConfig.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		7D3935911E111506007B4883 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7D3935921E111506007B4883 /* NSString+Extension.h */,
+				7D3935931E111506007B4883 /* NSString+Extension.m */,
+				7D3935941E111506007B4883 /* UIView+Extension.h */,
+				7D3935951E111506007B4883 /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		7D39359A1E1129F9007B4883 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				7D39359B1E1129F9007B4883 /* NSObject+SXJ.h */,
+				7D39359C1E1129F9007B4883 /* NSObject+SXJ.m */,
+				7D39359E1E1129F9007B4883 /* SXJDatabaseManager.h */,
+				7D39359F1E1129F9007B4883 /* SXJDatabaseManager.m */,
+				7D3935A51E112AF2007B4883 /* NoteDBManager.h */,
+				7D3935A61E112AF2007B4883 /* NoteDBManager.m */,
+				7D3935A01E1129F9007B4883 /* typeEncoding.plist */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		7DBCE3A61E10EA82004A203C = {
+			isa = PBXGroup;
+			children = (
+				7DBCE3B11E10EA82004A203C /* VoiceNote */,
+				7DBCE3B01E10EA82004A203C /* Products */,
+				5846F00132C478F3F4CF0630 /* Pods */,
+				19352DB3F797070748B7D106 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7DBCE3B01E10EA82004A203C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DBCE3AF1E10EA82004A203C /* VoiceNote.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DBCE3B11E10EA82004A203C /* VoiceNote */ = {
+			isa = PBXGroup;
+			children = (
+				7D3935881E110F2B007B4883 /* Other */,
+				7D39356B1E10F3E2007B4883 /* ViewController */,
+				7D39357C1E110010007B4883 /* View */,
+				7D3935801E1100B1007B4883 /* Model */,
+				7DBCE3B51E10EA82004A203C /* AppDelegate.h */,
+				7DBCE3B61E10EA82004A203C /* AppDelegate.m */,
+				7D3935751E10F436007B4883 /* AudioManager */,
+				7DBCE3BE1E10EA82004A203C /* Assets.xcassets */,
+				7DBCE3C01E10EA82004A203C /* LaunchScreen.storyboard */,
+				7DBCE3C31E10EA82004A203C /* Info.plist */,
+				7DBCE3B21E10EA82004A203C /* Supporting Files */,
+			);
+			path = VoiceNote;
+			sourceTree = "<group>";
+		};
+		7DBCE3B21E10EA82004A203C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DBCE3B31E10EA82004A203C /* main.m */,
+				7D3935901E1113C7007B4883 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DBCE3AE1E10EA82004A203C /* VoiceNote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DBCE3C61E10EA82004A203C /* Build configuration list for PBXNativeTarget "VoiceNote" */;
+			buildPhases = (
+				E5FA2B63A8EF5177DF9B7256 /* [CP] Check Pods Manifest.lock */,
+				7DBCE3AB1E10EA82004A203C /* Sources */,
+				7DBCE3AC1E10EA82004A203C /* Frameworks */,
+				7DBCE3AD1E10EA82004A203C /* Resources */,
+				6B3D22804A8E6E554B09CB99 /* [CP] Embed Pods Frameworks */,
+				365652691C572A72FEAEE784 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoiceNote;
+			productName = VoiceNote;
+			productReference = 7DBCE3AF1E10EA82004A203C /* VoiceNote.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DBCE3A71E10EA82004A203C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = sxj;
+				TargetAttributes = {
+					7DBCE3AE1E10EA82004A203C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = E6J99WEV4E;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7DBCE3AA1E10EA82004A203C /* Build configuration list for PBXProject "VoiceNote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7DBCE3A61E10EA82004A203C;
+			productRefGroup = 7DBCE3B01E10EA82004A203C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DBCE3AE1E10EA82004A203C /* VoiceNote */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DBCE3AD1E10EA82004A203C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DBCE3C21E10EA82004A203C /* LaunchScreen.storyboard in Resources */,
+				7DBCE3BF1E10EA82004A203C /* Assets.xcassets in Resources */,
+				7D3935A41E1129F9007B4883 /* typeEncoding.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		365652691C572A72FEAEE784 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoiceNote/Pods-VoiceNote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B3D22804A8E6E554B09CB99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoiceNote/Pods-VoiceNote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5FA2B63A8EF5177DF9B7256 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DBCE3AB1E10EA82004A203C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D3935971E111506007B4883 /* UIView+Extension.m in Sources */,
+				7D3935A31E1129F9007B4883 /* SXJDatabaseManager.m in Sources */,
+				7D3935781E10F436007B4883 /* AudioManager.m in Sources */,
+				7D39357F1E110039007B4883 /* NoteListTableViewCell.m in Sources */,
+				7DBCE3B71E10EA82004A203C /* AppDelegate.m in Sources */,
+				7D3935A11E1129F9007B4883 /* NSObject+SXJ.m in Sources */,
+				7D3935B01E116BEE007B4883 /* EBAppConfig.m in Sources */,
+				7D3935AD1E112FA2007B4883 /* EBCommon.m in Sources */,
+				7D3935AA1E112E43007B4883 /* MD5Tool.m in Sources */,
+				7D3935A71E112AF2007B4883 /* NoteDBManager.m in Sources */,
+				7D3935721E10F3E2007B4883 /* BaseViewController.m in Sources */,
+				7D3935731E10F3E2007B4883 /* ListViewController.m in Sources */,
+				7D3935831E1100E3007B4883 /* NoteModel.m in Sources */,
+				7DBCE3B41E10EA82004A203C /* main.m in Sources */,
+				7D3935961E111506007B4883 /* NSString+Extension.m in Sources */,
+				7D3935741E10F3E2007B4883 /* RecordViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7DBCE3C01E10EA82004A203C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DBCE3C11E10EA82004A203C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7DBCE3C41E10EA82004A203C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7DBCE3C51E10EA82004A203C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7DBCE3C71E10EA82004A203C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BF516DC1B78CABFC19BC18D /* Pods-VoiceNote.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E6J99WEV4E;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VoiceNote/PrefixHeader.pch";
+				INFOPLIST_FILE = VoiceNote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sxj.VoiceNote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7DBCE3C81E10EA82004A203C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 178D9EA9303336DC99D98D1B /* Pods-VoiceNote.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E6J99WEV4E;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VoiceNote/PrefixHeader.pch";
+				INFOPLIST_FILE = VoiceNote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sxj.VoiceNote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DBCE3AA1E10EA82004A203C /* Build configuration list for PBXProject "VoiceNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DBCE3C41E10EA82004A203C /* Debug */,
+				7DBCE3C51E10EA82004A203C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DBCE3C61E10EA82004A203C /* Build configuration list for PBXNativeTarget "VoiceNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DBCE3C71E10EA82004A203C /* Debug */,
+				7DBCE3C81E10EA82004A203C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7DBCE3A71E10EA82004A203C /* Project object */;
+}
