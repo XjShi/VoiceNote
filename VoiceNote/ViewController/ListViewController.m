@@ -125,6 +125,7 @@ static NSString *const kCellIdentifier = @"kCellIdentifier";
 #pragma mark - NoteListTableViewCellDelegate
 - (void)noteListTableViewCell:(NoteListTableViewCell *)cell play:(BOOL)play {
     if (play) {
+        _currentPlayingCell.playButton.selected = NO;
         _currentPlayingCell = cell;
         NSString *path = [EBCommon absolutelyAudioPathFromRelativelyPath:cell.note.ID];
         [self.audioManager playAudioAtPath:path];
@@ -149,7 +150,7 @@ static NSString *const kCellIdentifier = @"kCellIdentifier";
 #pragma mark - Private Method
 - (void)addRecord {
     [_audioManager stopPlay];
-    
+    _currentPlayingCell.playButton.selected = NO;
     RecordViewController *vc = [RecordViewController new];
     vc.delegate = self;
     [self presentViewController:vc animated:YES completion:NULL];

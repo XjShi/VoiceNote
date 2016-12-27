@@ -58,6 +58,7 @@ NSString *const AudioManagerRecordPath = @"recordPath";
     _recordPathURL = [NSURL URLWithString:path];
     NSError *err;
     _audioRecorder = [[AVAudioRecorder alloc] initWithURL:_recordPathURL settings:[self settingForRecordingSession] error:&err];
+    _audioRecorder.meteringEnabled = YES;
     if (_audioRecorder == nil) {
         NSLog(@"err:%@",err.localizedDescription);
         return;
@@ -141,7 +142,6 @@ NSString *const AudioManagerRecordPath = @"recordPath";
     @try {
         [self setAudioSessionCategory:AVAudioSessionCategoryPlayback];
         NSError *err = nil;
-//        NSString *wavPath = [VoiceConverter amrToWav:path];
         _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:&err];
         _audioPlayer.delegate = self;
         if (_audioPlayer == nil) {
@@ -165,9 +165,7 @@ NSString *const AudioManagerRecordPath = @"recordPath";
     NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfig];
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//        NSString *path = [[[EBCacheManager defaultManager] pathForCacheType:AudioCacheType] stringByAppendingPathComponent:[[self stringFromDate:[NSDate date]] stringByAppendingPathExtension:@"amr"]];
         if  ([data writeToFile:path atomically:YES]) {
-//            NSString *wavPath = [VoiceConverter amrToWav:path];
             [self playAudioAtPath:path];
         }
     }];

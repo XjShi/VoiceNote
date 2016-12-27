@@ -38,6 +38,9 @@ extern NSString *const AudioManagerRecordPath;
 
 @interface AudioManager : NSObject <AVAudioRecorderDelegate,AVAudioPlayerDelegate>
 
+@property (nonatomic, strong, readonly) AVAudioPlayer *audioPlayer;
+@property (nonatomic, strong, readonly) AVAudioRecorder *audioRecorder;
+
 /**
  *  这个timer，在不在使用录音／播放功能时，需要释放
  **/

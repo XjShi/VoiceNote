@@ -14,4 +14,6 @@
 + (BOOL)moveAudioAtPath:(NSString *)res toDestination:(NSString *)des;
 + (NSString *)absolutelyAudioPathFromRelativelyPath:(NSString *)path;
 
++ (float)soundFilter:(float)power;
+
 @end

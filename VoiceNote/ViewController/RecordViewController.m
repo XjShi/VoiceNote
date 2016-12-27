@@ -13,8 +13,9 @@
 #import "EBCommon.h"
 #import "MD5Tool.h"
 #import "EBAppConfig.h"
+#import "WaveView.h"
 
-@interface RecordViewController () <AudioManagerDelegate>
+@interface RecordViewController () <AudioManagerDelegate, AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) UIButton *recordBtn;
 @property (nonatomic, strong) UIButton *playBtn;
@@ -22,8 +23,10 @@
 @property (nonatomic, strong) UILabel *timeLabel;
 @property (nonatomic, strong) UIStackView *stackView;
 @property (nonatomic, strong) UILabel *promptLabel;
+@property (nonatomic, strong) WaveView *waveView;
 
 @property (nonatomic, strong) AudioManager *audioManager;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 
 @property (nonatomic, strong) NoteModel *note;
 @end
@@ -32,12 +35,17 @@
 {
     CADisplayLink *_displayLink;
     UISwipeGestureRecognizer *_gesture;
+    
+    NSTimer *_playerTimer;
+    NSTimer *_recorderTimer;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.timeLabel];
     [self.view addSubview:self.stackView];
+    [self.view addSubview:self.waveView];
+    
     if ([EBAppConfig isFirstLaunch]) {
         [self.view addSubview:self.promptLabel];
     }
@@ -154,10 +162,35 @@
     return _note;
 }
 
+- (WaveView *)waveView {
+    if (!_waveView) {
+        _waveView = [[WaveView alloc] initWithFrame:CGRectMake(0, 100, kScreenWidth, 200)];
+    }
+    return _waveView;
+}
+
 #pragma mark - AudioManagerDelegate
 - (void)audioManager:(AudioManager *)manager didFinishPlaySuccessfully:(BOOL)success {
     _gesture.enabled = YES;
     _playBtn.selected = NO;
+    if (_playerTimer && [_playerTimer isValid]) {
+        [_playerTimer invalidate];
+    }
+}
+
+- (void)audioManager:(AudioManager *)manager didFinishRecordSuccessfully:(BOOL)success {
+    if (_recorderTimer && [_recorderTimer isValid]) {
+        [_playerTimer invalidate];
+    }
+}
+
+#pragma mark - AVAudioPlayerDelegate
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    _gesture.enabled = YES;
+    _playBtn.selected = NO;
+    if (_playerTimer && [_playerTimer isValid]) {
+        [_playerTimer invalidate];
+    }
 }
 
 #pragma mark - Private Method
@@ -165,6 +198,7 @@
     sender.selected = !sender.selected;
     _gesture.enabled = !sender.selected;
     if (sender.selected) {
+        [self.waveView clearAllPoint];
         _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateTimeLabel)];
         [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
         
@@ -172,9 +206,15 @@
         self.completeBtn.enabled = NO;
         NSString *path = [EBCommon tmpAudioPath];
         [self.audioManager startRecordingWithPath:path];
+        
+        _recorderTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+            [self.audioManager.audioRecorder updateMeters];
+            float level = [EBCommon soundFilter:[self.audioManager.audioRecorder averagePowerForChannel:0]];
+            [self.waveView addAveragePoint:level];
+        }];
     } else {
         [_displayLink invalidate];
-        
+        [_recorderTimer invalidate];
         NSDictionary *dict = [self.audioManager stopRecording];
         self.note.duration = ((NSNumber *)[dict objectForKey:AudioManagerRecordTimeLength]).floatValue;
         self.playBtn.enabled = YES;
@@ -187,11 +227,26 @@
     sender.selected = !sender.selected;
     _gesture.enabled = !sender.selected;
     if (sender.selected) {
+        [self.waveView clearAllPoint];
         NSString *path = [EBCommon tmpAudioPath];
-        [self.audioManager playAudioAtPath:path];
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path]
+                                                                  error:nil];
+        if (self.audioPlayer) {
+            self.audioPlayer.delegate = self;
+            [self.audioPlayer setMeteringEnabled:YES];
+            [self.audioPlayer prepareToPlay];
+            [self.audioPlayer play];
+        }
+        _playerTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+            [self.audioPlayer updateMeters];
+            float level = [EBCommon soundFilter:[self.audioPlayer averagePowerForChannel:0]];
+            [self.waveView addAveragePoint:level];
+        }];
         self.recordBtn.enabled = NO;
     } else {
         [self.audioManager stopPlay];
+        [_playerTimer invalidate];
         self.recordBtn.enabled = YES;
     }
 }

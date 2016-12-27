@@ -31,4 +31,25 @@
     return [ducumentpath stringByAppendingPathComponent:path];
 }
 
++ (float)soundFilter:(float)power {
+    float   level;                // The linear 0.0 .. 1.0 value we need.
+    float   minDecibels = - 80.0f; // Or use -60dB, which I measured in a silent room.
+    float   decibels = power;
+    
+    if (decibels < minDecibels) {
+        level = 0.0f;
+    }else if (decibels >= 0.0f) {
+        level = 1.0f;
+    }else {
+        float   root            = 2.0f;
+        float   minAmp          = powf(10.0f, 0.05f * minDecibels);
+        float   inverseAmpRange = 1.0f / (1.0f - minAmp);
+        float   amp             = powf(10.0f, 0.05f * decibels);
+        float   adjAmp          = (amp - minAmp) * inverseAmpRange;
+        
+        level = powf(adjAmp, 1.0f / root);
+    }
+    return level;
+}
+
 @end

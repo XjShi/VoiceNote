@@ -25,6 +25,7 @@
 		7D3935AA1E112E43007B4883 /* MD5Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3935A91E112E43007B4883 /* MD5Tool.m */; };
 		7D3935AD1E112FA2007B4883 /* EBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3935AC1E112FA2007B4883 /* EBCommon.m */; };
 		7D3935B01E116BEE007B4883 /* EBAppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3935AF1E116BEE007B4883 /* EBAppConfig.m */; };
+		7D3935B31E1212B6007B4883 /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3935B21E1212B6007B4883 /* WaveView.m */; };
 		7DBCE3B41E10EA82004A203C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBCE3B31E10EA82004A203C /* main.m */; };
 		7DBCE3B71E10EA82004A203C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBCE3B61E10EA82004A203C /* AppDelegate.m */; };
 		7DBCE3BF1E10EA82004A203C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DBCE3BE1E10EA82004A203C /* Assets.xcassets */; };
@@ -67,6 +68,8 @@
 		7D3935AC1E112FA2007B4883 /* EBCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBCommon.m; sourceTree = "<group>"; };
 		7D3935AE1E116BEE007B4883 /* EBAppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBAppConfig.h; sourceTree = "<group>"; };
 		7D3935AF1E116BEE007B4883 /* EBAppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBAppConfig.m; sourceTree = "<group>"; };
+		7D3935B11E1212B6007B4883 /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
+		7D3935B21E1212B6007B4883 /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
 		7DBCE3AF1E10EA82004A203C /* VoiceNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBCE3B31E10EA82004A203C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DBCE3B51E10EA82004A203C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 			children = (
 				7D39357D1E110039007B4883 /* NoteListTableViewCell.h */,
 				7D39357E1E110039007B4883 /* NoteListTableViewCell.m */,
+				7D3935B11E1212B6007B4883 /* WaveView.h */,
+				7D3935B21E1212B6007B4883 /* WaveView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 				7D3935731E10F3E2007B4883 /* ListViewController.m in Sources */,
 				7D3935831E1100E3007B4883 /* NoteModel.m in Sources */,
 				7DBCE3B41E10EA82004A203C /* main.m in Sources */,
+				7D3935B31E1212B6007B4883 /* WaveView.m in Sources */,
 				7D3935961E111506007B4883 /* NSString+Extension.m in Sources */,
 				7D3935741E10F3E2007B4883 /* RecordViewController.m in Sources */,
 			);
